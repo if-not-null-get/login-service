@@ -1,0 +1,25 @@
+language: java
+jdk:
+  - oraclejdk8
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+before_deploy: "echo 'Preparing deployment...'"
+
+deploy:
+  - provider: elasticbeanstalk
+    access-key-id: AKIAJBYPDOKFQ4SI53OA
+    secret-access-key: 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
+    region: eu-west-1
+    app: HOT DELIVERY
+    env: HotDelivery-env
+    skip_cleanup: true
+    zip_file: './build/libs/login-service-0.0.1-SNAPSHOT.jar'
+    on:
+      branch: master
