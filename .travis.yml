@@ -20,6 +20,6 @@ deploy:
   env: HotDelivery-env
   skip_cleanup: true
   zip_file: "./build/libs/login-service-0.0.1-SNAPSHOT.jar"
-  bucket: "S3 Bucket"
+  bucket: "elasticbeanstalk-eu-west-1-481480898429"
   on:
     branch: master
