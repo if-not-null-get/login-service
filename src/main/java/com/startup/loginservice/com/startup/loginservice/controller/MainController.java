@@ -8,6 +8,6 @@ public class MainController {
 
     @GetMapping("/login")
     public String login(){
-        return "<h1>Welcome to the Login page</h1>";
+        return "You have successfully logged in";
     }
 }
