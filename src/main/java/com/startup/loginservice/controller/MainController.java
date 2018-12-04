@@ -10,4 +10,9 @@ public class MainController {
     public String login(){
         return "You have successfully logged in";
     }
+
+    @GetMapping("/success")
+    public String success() {
+        return "Successfully logged in";
+    }
 }
