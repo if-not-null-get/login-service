@@ -11,7 +11,7 @@ cache:
 before_deploy: echo 'Preparing deployment...'
 deploy:
   matrix:
-  - provider: elasticbeanstalk
+    provider: elasticbeanstalk
     access_key_id:
       secure:
     secret_access_key:
