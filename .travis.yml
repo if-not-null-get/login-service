@@ -15,7 +15,7 @@ before_deploy: "echo 'Preparing deployment...'"
 deploy:
   - provider: elasticbeanstalk
     access-key-id:
-      secure: AKIAJXQPNNYB3NIN6IYA
+      secure:
     secret-access-key:
       - secure:
     region: eu-west-1
