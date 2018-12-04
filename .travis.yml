@@ -10,7 +10,6 @@ cache:
   - "$HOME/.gradle/wrapper/"
 before_deploy: echo 'Preparing deployment...'
 deploy:
-  matrix:
     provider: elasticbeanstalk
     access_key_id:
       secure:
