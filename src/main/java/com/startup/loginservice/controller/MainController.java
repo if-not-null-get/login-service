@@ -1,4 +1,4 @@
-package com.startup.loginservice.com.startup.loginservice.controller;
+package com.startup.loginservice.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
