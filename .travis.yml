@@ -15,9 +15,9 @@ before_deploy: "echo 'Preparing deployment...'"
 deploy:
   - provider: elasticbeanstalk
     access-key-id:
-      - secure: AKIAJBYPDOKFQ4SI53OA
+      - secure:
     secret-access-key:
-      - secure: 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
+      - secure:
     region: eu-west-1
     app: HOT DELIVERY
     env: HotDelivery-env
