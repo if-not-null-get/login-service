@@ -1,27 +1,27 @@
 language: java
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
-before_deploy: "echo 'Preparing deployment...'"
-
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+before_deploy: echo 'Preparing deployment...'
 deploy:
+  matrix:
   - provider: elasticbeanstalk
-    access-key-id:
-      secure:
-    secret-access-key:
-      - secure:
+    access_key_id:
+      secure: "AKIAJXQPNNYB3NIN6IYA"
+    secret_access_key:
+      secure: 
     region: eu-west-1
     app: HOT DELIVERY
     env: HotDelivery-env
     skip_cleanup: true
-    zip_file: './build/libs/login-service-0.0.1-SNAPSHOT.jar'
+    zip_file: "./build/libs/login-service-0.0.1-SNAPSHOT.jar"
     on:
       branch: master
+  access_key_id:
+    secure: W49nQDNrFPZMlo6M9Cai00zbsfL4ZzaaUnQ+KvI1hCMXPmhx2fIknIws60RRo535B/sZEwwVN4dunvULcovtYdYwDNfzpZUEurJEfxcvVXOypJnCpL50NyNwpBT8AdIzT1YgShGhbQf4ApWuTdNVvPYTdoGnXfqlG0AFVSQlDXLv2StaGqVETzHLAAwj3AUPBcXaL6V6t7RU7j4nTmgla0fhBqlcJPZJecG3yFTY2C+gg+GNKRez8iVd9bUNXiv/OYbn2xELXNpvR2D7l2mvNCGMCDDrjkV6tz7ZRybnYPtfrIuaD/7pFN67pqm79XChVdqB/NFzn26OTX1yyeo+Cdz7ONMoLZsDho/k6DGl6u3zJUZ3Daz1UUsLUklF0tXDf1ZIQcWjNlipMZcZgjceEyREa7BywHzqWWCyKTaB1u2yw0506jl7IaoL9w6PBLPUV29i4KBg9IqTRx1ztzPEV73W8abS7waNAO4yvEfv8yV9dPRK16uXWZ3OemCfkHqQ8A+aRfSy5kXkA8if2R3emgWdzg6eJJ58V78+KEJOyVXM9C5LLyvL3uzyvUdw3OnDfrwc7+zLuRFG6H4NmZrzLER77O8HUmVBshyKxxZlIVHXePPHX/QtLMHieDDfh1oZ54BaygGLmgJmQ30PRAB/NRZD4XOrNbZEbxo1TSdMzZ8=
