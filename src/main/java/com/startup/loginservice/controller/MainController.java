@@ -6,13 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @GetMapping("/login")
-    public String login(){
-        return "You have successfully logged in";
-    }
-
     @GetMapping("/success")
     public String success() {
-        return "Successfully logged in";
+        return "<h1>Successfully logged in</h1>";
     }
 }
